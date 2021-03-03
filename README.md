@@ -1,5 +1,5 @@
 # Reverse Average Calculator
-Takes an average and dataset size to determine possible formulae to recreate average.
+Takes an average and dataset size to determine possible formulae to recreate the average.
 
 I probably picked the worst way to figure this out, I'm keen to hear from others on how they would approach this problem as well.
 Here's my solution:
