@@ -1,0 +1,36 @@
+#equation {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
+}
+
+#equation p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  margin: 0;
+}
+
+#equation-formula {
+  display: inline-table;
+  font-size: 20px;
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+
+#equation-formula tr:first-child {
+  padding-bottom: 5px;
+  border-bottom: solid 1px;
+  width: auto;
+  text-align: center;
+}
+
+#equation-formula tr {
+  padding: 0;
+  text-align: center;
+}
+
+#equation td:first-child {
+  padding-bottom: 5px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse an Average</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Reverse An Average</h1>
+    </header>
+    <main>
+        <form onsubmit="return false" autocomplete="off">
+            <fieldset>
+                <legend>required numbers</legend>
+                <label for="average">Average</label><br>
+                <input type="text" id="average" name="average" required><br><br>
+                <label for="quantity">Number of items in data set</label><br>
+                <input type="text" id="quantity" name="quantity" required><br><br>
+                <input type="submit" value="Submit" id="submit">
+            </fieldset>
+        </form>
+        <h3>Output</h3>
+        <div id="output"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
