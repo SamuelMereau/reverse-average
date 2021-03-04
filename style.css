@@ -34,3 +34,7 @@
 #equation td:first-child {
   padding-bottom: 5px;
 }
+
+#error-message {
+  color: red;
+}

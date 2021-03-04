@@ -21,7 +21,7 @@ class Calculation {
         .join()
         .replace(/[,]/g, ' + ')}</td></tr> <tr><td>${
         currentCalculation.quantity
-      }</td></tr></table><p>= ${Math.round(sum / currentCalculation.quantity)}</div>`;
+      }</td></tr></table><p>= ${sum / currentCalculation.quantity}</div>`;
       output.appendChild(equation);
     }
   });
@@ -30,13 +30,22 @@ class Calculation {
 function calculate(object) {
   const average = object.average;
   const quantity = object.quantity;
-  //For now, we want to finish only when we find the first match.
   let hasCalculated = false;
   let i = 0;
   while (hasCalculated == false) {
-    if (i >= 2000) {
+    if (i >= 5000) {
       //Input with no solution or just absolutely bonkers will be stopped (hopefully) before it eats all your RAM.
       hasCalculated = true;
+      const form = document.querySelector('#form');
+      if (document.querySelector('#error-message') !== null) {
+        const errorMessage = document.querySelector('#error-message');
+        form.removeChild(errorMessage);
+      }
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent =
+        'This combination of numbers are either too large or impossible to achieve.';
+      errorMessage.id = 'error-message';
+      form.appendChild(errorMessage);
       return;
     }
     //Average is sum/quantity = average. Multiply by reciprocal to equal sum = average * quantity
@@ -48,6 +57,11 @@ function calculate(object) {
     if (formula == manipulatedAverage) {
       //We have a match!
       hasCalculated = true;
+      const form = document.querySelector('#form');
+      if (document.querySelector('#error-message') !== null) {
+        const errorMessage = document.querySelector('#error-message');
+        form.removeChild(errorMessage);
+      }
       return estimateDataSet(formula, object);
     } else {
       i += 1;
