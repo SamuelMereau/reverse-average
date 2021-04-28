@@ -12,14 +12,25 @@
         <h1>Reverse An Average</h1>
     </header>
     <main>
-        <form onsubmit="return false" autocomplete="off" id="form">
+        <form onsubmit="return false" autocomplete="off" id="required-form">
             <fieldset>
-                <legend>required numbers</legend>
+                <legend>Required numbers</legend>
                 <label for="average">Average</label><br>
                 <input type="text" id="average" name="average" required><br><br>
                 <label for="quantity">Number of items in data set</label><br>
                 <input type="text" id="quantity" name="quantity" required><br><br>
                 <input type="submit" value="Submit" id="submit">
+            </fieldset>
+        </form>
+        <form onsubmit="return false" autocomplete="off" id="optional-form">
+            <fieldset>
+                <legend>Optional Numbers</legend>
+                <label for="high">High</label><br>
+                <input type="text" id="high" name="high" required><br><br>
+                <label for="median">Median</label><br>
+                <input type="text" id="median" name="median" required><br><br>
+                <label for="low">Low</label><br>
+                <input type="text" id="low" name="low"><br><br>
             </fieldset>
         </form>
         <h3>Output</h3>

@@ -36,7 +36,7 @@ function calculate(object) {
     if (i >= 5000) {
       //Input with no solution or just absolutely bonkers will be stopped (hopefully) before it eats all your RAM.
       hasCalculated = true;
-      const form = document.querySelector('#form');
+      const form = document.querySelector('#required-form');
       if (document.querySelector('#error-message') !== null) {
         const errorMessage = document.querySelector('#error-message');
         form.removeChild(errorMessage);
@@ -57,7 +57,7 @@ function calculate(object) {
     if (formula == manipulatedAverage) {
       //We have a match!
       hasCalculated = true;
-      const form = document.querySelector('#form');
+      const form = document.querySelector('#required-form');
       if (document.querySelector('#error-message') !== null) {
         const errorMessage = document.querySelector('#error-message');
         form.removeChild(errorMessage);
@@ -70,7 +70,6 @@ function calculate(object) {
 }
 
 function estimateDataSet(num, object) {
-  const average = object.average;
   const quantity = object.quantity;
   //If we don't have a high, low, or median, assume a dataset
   let makeRandomInt = Math.round(num - 0 * quantity);
